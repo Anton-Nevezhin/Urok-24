@@ -1,0 +1,60 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+
+  .btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 40px;
+  }
+
+  .text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    word-spacing: 2em;
+  }
+
+  .textMiddle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 18px;
+    word-spacing: 2em;
+  }
+
+  .textBig {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 48px;
+    text-align: center;
+    line-height: 18px;
+    word-spacing: 2em;
+  }
+
+  .container {
+    display: flex;
+}
+
+.item {
+  padding: 4px;
+  font-size: 25px;
+  border: 1px solid black;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  flex-grow: 1;
+  flex-basis: 33%;
+}
+
+.item_1 {
+  flex-grow: 1;
+}
+
+.item_2 {
+  flex-grow: 1;
+}
