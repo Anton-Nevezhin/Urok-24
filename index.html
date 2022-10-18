@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Calling Function From HTML</title>
+
+</head>
+<link rel="stylesheet" href="css/main.css">
+<body>
+    <h1>Урок 24. Продвинутая работа с DOM</h1>
+    <div class="container">
+        <div class='item item_1'>
+            <br>
+            <div id='elem1' class='text'></div>
+            <br>
+            <button type="submit" class=btn onclick="classPlus()">Добавить класс</button>
+            <br>
+            <hr>
+            <br>
+            <div id='elem2' class='text www'></div>
+            <br>
+            <button type="submit" class=btn onclick="classMinus()">Удалить класс</button>
+            <br>
+            <hr>
+            <br>
+            <div id='elem3' class='text www'></div>
+            <br>
+            <button type="submit" class=btn onclick="classNal()">Проверить наличие класса</button>
+            <br>
+            <hr>
+            <br>
+            <div id='elem4' class='text'></div>
+            <br>
+            <button type="submit" class=btn onclick="classTrig()">Добавить или удалить класс</button>
+            <br>
+            <hr>
+            <br>
+            <div id='elem5' class='text www ggg'></div>
+            <br>
+            <button type="submit" class=btn onclick="classCol()">Подсчитать классы</button>
+            <br>
+            <hr>
+            <br>
+            <div id='elem6' class='text www ggg'></div>
+            <br>
+            <button type="submit" class=btn onclick="classAlert()">Вывести классы</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text>
+                <p>Первый</p>
+                <p id="sibPre">Второй</p>
+                <p>Третий</p>
+            </div>
+            <button type="submit" class=btn onclick="sibPre()">Найти соседа сверху</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text>
+                <p>Первый</p>
+                <p id="sibNext">Второй</p>
+                <p>Третий</p>
+            </div>
+            <button type="submit" class=btn onclick="sibNext()">Найти соседа снизу</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text>
+                <p id="sibNextNext">Первый</p>
+                <p>Второй</p>
+                <p>Третий</p>
+            </div>
+            <button type="submit" class=btn onclick="sibNextNext()">Найти соседа снизу соседа снизу</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text>Родительский <span id="poiskPar" style="color:black;">потомок</span> элемент</div>
+            <button type="submit" class=btn onclick="poiskPar()">Найти родителя</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text>Родительский <span style="color:black;">Родительский <span id="poiskParPar">потомок</span> элемент</span> элемент</div>
+            <button type="submit" class=btn onclick="poiskParPar()">Найти родителя родителя</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="chPar">
+                <p>Первый</p>
+                <p id="chUdal">Второй - будет удален</p>
+                <p>Третий</p>
+            </div>
+            <button type="submit" class=btn onclick="chUdal()">Удалить элемент</button>
+            <br>
+            <hr>
+            <br>
+            <ol id='chEndUdal' class=text>
+                <li>Один</li>
+                <li>Два</li>
+                <li>Три</li>
+            </ol>
+            <button type="submit" class=btn onclick="chEndUdal()">Удалить последний элемент</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id='selfUdal' onclick="selfUdal()">Нажмите для удаления</div>
+            <br>
+            <hr>
+            <br>
+            <ol id='chEndUdal' class=text>
+                <li onclick="chThisUdal(this)">Один</li>
+                <li onclick="chThisUdal(this)">Два</li>
+                <li onclick="chThisUdal(this)">Три</li>
+            </ol>
+            <br>
+            <hr>
+            <br>
+            <div>
+            <input type="text" style="margin-top: 20px;" id="elCopy" value="Скопируется!"/>
+            <br>
+            <button type="submit" class=btn onclick="elCopy()">Сделать копию</button>
+            <br>
+            </div>
+            <hr>
+                         
+        </div>
+        <div class='item item_1'>
+            <br>
+            <div id='cssText' class=text>Пример текста</div>
+            <br>
+            <button type="submit" class=btn onclick="stiles()">Поменять стили</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text onclick="showTeg(this)">Нажмите сюда</div>
+            <br>
+            <hr>
+            <br>
+            <div class=text onclick="showTeg1(this)">Нажмите сюда</div>
+            <br>
+            <hr>
+            <br>
+            <div id='endTeg' class='text ww'>Пример текста (не работает)</div>
+            <br>
+            <button type="submit" class=btn onclick="endTeg()">Вывести теги</button>
+            <br>
+            <hr>
+            <br>
+            <ol id='endLi'>
+                <li>Один</li>
+                <li>Два</li>
+                <li>Три</li>
+            </ol>
+            <button type="submit" class=btn onclick="endLi()">Добавить пункт</button>
+            <br>
+            <hr>
+            <br>
+            <ul id='masLi'>
+
+            </ul>
+            <button type="submit" class=btn onclick="masLi()">Добавить пункты</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="clickOut">Значение пункта</div>
+            <br>
+            <ul id='masClick'>
+
+            </ul>
+            <button type="submit" class=btn onclick="clickOut()">Вывести содержимое</button>
+            <br>
+            <hr>
+            <br>
+            <ul id='ulBefore'>
+                <li id="liBefore">Первый</li>
+
+            </ul>
+            <button type="submit" class=btn onclick="liBefore()">Добавить пункт</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="spisPlus">
+
+            </div>
+            <button type="submit" class=btn onclick="spisPlus()">Добавить список</button>
+            <br>
+            <hr>
+            <br>
+            <div>
+            <input type="text" style="margin-top: 20px;" id="plusCopy" value="Скопируется!"/>
+            <br>
+            <button type="submit" class=btn onclick="plusCopy()">+</button>
+            <br>
+            </div>
+            <hr>
+            <br>
+            <div id="divNew">
+            <input type="text" style="margin-top: 20px;" onblur="inpNew()" id="inpNew" value="Введите число!!"/>
+            <br>
+            </div>
+            <hr>
+            <div>
+            <br>
+            <div class=text id="skrPar">Родитель
+            </div>
+            <button type="submit" class=btn onclick="skrPar()">Скрыть родителя</button>
+            <br>
+            </div>
+            <hr>
+
+        </div>
+
+        <div class='item item_1'>
+            <br>
+            <div class=text id="divBefore">
+                Вставка перед абзацем
+            </div>
+            <button type="submit" class=btn onclick="divBefore()">Вставить элемент</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="divAfter">
+                Вставка после абзаца
+            </div>
+            <button type="submit" class=btn onclick="afterEnd()">Вставить элемент</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="divBegin">
+                Вставка в начало абзаца
+            </div>
+            <button type="submit" class=btn onclick="afterBegin()">Вставить элемент</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="divEnd">
+                Вставка в конец абзаца
+            </div>
+            <button type="submit" class=btn onclick="endBefore()">Вставить элемент</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="potFirst">
+                <p>Первый</p>
+                <p>Второй</p>
+                <p>Третий</p>
+            </div>
+            <button type="submit" class=btn onclick="potFirst()">Найти первого потомка</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="potEnd">
+                <p>Первый</p>
+                <p>Второй</p>
+                <p>Третий</p>
+            </div>
+            <button type="submit" class=btn onclick="potEnd()">Найти последнего потомка</button>
+            <br>
+            <hr>
+            <br>
+            <div class=text id="potAll">
+                <p>Первый</p>
+                <p>Второй</p>
+                <p>Третий</p>
+            </div>
+            <button type="submit" class=btn onclick="potAll()">Найти всех потомков</button>
+            <br>
+            <hr>
+        </div>
+     
+
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
